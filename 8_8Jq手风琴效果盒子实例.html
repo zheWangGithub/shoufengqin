@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		    <style>
+		       .wrap{
+		           width: 1100px;
+		           height: 200px;
+		           margin: 0 auto;
+		       }
+		       .item{
+		           width: 200px;
+		           height: 200px;
+		           box-sizing: border-box;
+		           border: 2px solid #000;
+		           float: left;
+		           position: relative;
+		           overflow: hidden;
+		       }
+		       .active{
+		           width: 400px;
+		       }
+		       .logo,.content{
+		           width: 196px;
+		           height: 196px;
+		           background: #000;
+		           line-height: 196px;
+		           color: #fff;
+		           box-sizing: border-box;
+		           text-align: center;
+		       }
+		       .content{
+		           background: #ddd;
+		           position: absolute;
+		           top: 0;
+		           left: 196px;
+		       }
+		    </style>
+		
+	</head>
+	  
+	<body>
+	
+		 <div class="wrap">
+	        <div class="item active">
+	            <div class="logo">我是默认显示的logo</div>
+	            <div class="content">我是内容content</div>
+	        </div>
+	        <div class="item">
+	            <div class="logo">我是默认显示的logo</div>
+	            <div class="content">我是内容content</div>
+	        </div>
+	        <div class="item">
+	            <div class="logo">我是默认显示的logo</div>
+	            <div class="content">我是内容content</div>
+	        </div>
+	        <div class="item">
+	            <div class="logo">我是默认显示的logo</div>
+	            <div class="content">我是内容content</div>
+	        </div>
+	    </div>
+	    
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+//	$(function(){
+//		$('.item').mouseenter(function(){
+//			$(this).stop().animate({width:400}).siblings('.item').stop().animate({width:200})
+//		})
+//	})
+	$(function(){
+		$('.item').mouseenter(function(){
+			$(this).stop().animate({width:400}).siblings('.item').stop().animate({width:200})
+			
+		})
+	})
+</script>
+	
+
